@@ -42,7 +42,8 @@ public class SSRF {
      */
     @RequestMapping(value = "/urlConnection/vuln", method = {RequestMethod.POST, RequestMethod.GET})
     public String URLConnectionVuln(String url) {
-        return HttpUtils.URLConnection(url);
+        return URLConnectionSec(String url)
+        // return HttpUtils.URLConnection(url);
     }
 
 
